@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz 21 de septiembre</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      font-family: 'Trebuchet MS', sans-serif;
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 3em;
+      animation: fadeIn 3s ease-in-out;
+    }
+    p {
+      font-size: 1.5em;
+      margin-top: 20px;
+      animation: fadeIn 5s ease-in-out;
+    }
+    button {
+      margin-top: 30px;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 20px;
+      background: #fff;
+      color: #ff4b6e;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ffe6ec;
+    }
+    #mensaje {
+      display: none;
+      font-size: 1.5em;
+      margin-top: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .heart {
+      position: absolute;
+      color: red;
+      font-size: 2em;
+      animation: float 6s infinite;
+    }
+    @keyframes float {
+      0% {transform: translateY(0);}
+      100% {transform: translateY(-800px);}
+    }
+  </style>
+</head>
+<body>
+  <h1>💖 Feliz 21 de septiembre 💖</h1>
+  <p>Un regalo digital para ti...</p>
+  <button onclick="mostrarMensaje()">Haz clic aquí</button>
+  <div id="mensaje">✨ Eres mi persona favorita en el mundo, gracias por existir. ✨</div>
+
+  <script>
+    // Corazones flotando
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "❤";
+      heart.style.left = Math.random() * window.innerWidth + "px";
+      heart.style.top = window.innerHeight + "px";
+      heart.style.fontSize = (Math.random() * 20 + 20) + "px";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+    setInterval(createHeart, 500);
+
+    // Mensaje sorpresa
+    function mostrarMensaje() {
+      document.getElementById("mensaje").style.display = "block";
+    }
+  </script>
+
+  <!-- 🎶 Opcional: poner música de fondo -->
+  <!--
+  <audio autoplay loop>
+    <source src="tu-cancion.mp3" type="audio/mpeg">
+  </audio>
+  -->
+
+</body>
+</html>
