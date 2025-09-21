@@ -60,13 +60,39 @@
       0% {transform: translateY(0);}
       100% {transform: translateY(-800px);}
     }
+    .galeria {
+      margin-top: 20px;
+    }
+    .galeria img {
+      width: 250px;
+      border-radius: 15px;
+      margin: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
   </style>
 </head>
 <body>
   <h1>💖 Feliz 21 de septiembre 💖</h1>
   <p>Un regalo digital para ti...</p>
+
+  <!-- Fotos -->
+  <div class="galeria">
+    <img src="de6cae89-630b-4e21-b016-0d38a2c9c297.png" alt="Foto 1">
+    <img src="52f920f5-4d28-4060-abdb-35a06515c511.png" alt="Foto 2">
+  </div>
+
+  <!-- Botón con dedicatoria -->
   <button onclick="mostrarMensaje()">Haz clic aquí</button>
-  <div id="mensaje">✨ Eres mi persona favorita en el mundo, gracias por existir. ✨</div>
+  <div id="mensaje">✨ Eres mi persona favorita en el mundo, gracias por existir ✨</div>
+
+  <!-- Música de fondo con dos canciones -->
+  <iframe width="0" height="0" 
+  src="https://www.youtube.com/embed/PI3LAgGBxqU?autoplay=1&loop=1&playlist=PI3LAgGBxqU" 
+  frameborder="0" allow="autoplay"></iframe>
+
+  <iframe width="0" height="0" 
+  src="https://www.youtube.com/embed/B5YoLotC_RU?autoplay=1&loop=1&playlist=B5YoLotC_RU" 
+  frameborder="0" allow="autoplay"></iframe>
 
   <script>
     // Corazones flotando
@@ -85,18 +111,10 @@
     }
     setInterval(createHeart, 500);
 
-    // Mensaje sorpresa
+    // Mostrar mensaje sorpresa
     function mostrarMensaje() {
       document.getElementById("mensaje").style.display = "block";
     }
   </script>
-
-  <!-- 🎶 Opcional: poner música de fondo -->
-  <!--
-  <audio autoplay loop>
-    <source src="tu-cancion.mp3" type="audio/mpeg">
-  </audio>
-  -->
-
 </body>
 </html>
